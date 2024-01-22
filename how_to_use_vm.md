@@ -12,7 +12,9 @@
 
 5. Click Next and Finish.
 
-6. Run the VM, and login by using this credential:
+6. Set port forwarding. Ensure TCP 80 in the VM is mapped to 5331 in the host. Follow this link: https://www.youtube.com/watch?v=Kq_JOGX0MW4
+   
+7. Run the VM, and login by using this credential:
 
     username: student
    
@@ -20,8 +22,7 @@
 
 8. Try to access http://localhost:5331/secret.html from your Host OS.
 
-
-
+9. If you cannot access it, recheck your port forwarding settings and check the status of Apache.
 
 
 #### If you use Apple M1/M2:
@@ -30,7 +31,7 @@
 
 2. Then, download the VM in Google Drive and open it in UTM: https://drive.google.com/file/d/1joRGFyi5daUOLv4-s76OePSWn1QlzSBH/view?usp=sharing
 
-3. Mapping  TCP 80 in the VM to 5331 in the host.
+3. Set port forwarding. Ensure TCP 80 in the VM is mapped to 5331 in the host. Follow this link: https://blog.korbexmachina.com/posts/utm-port-forwarding/
 
 4. Run the VM, and log in by using this credential:
 
@@ -38,12 +39,9 @@
    
     password: websec5331
    
-
-('ubuntu' is the root account, the password for ubuntu is also 'websec5331')
-
-
 5. Try to access http://localhost:5331/secret.html from your Host OS.
 
-(If you cannot access it, recheck your port forwarding settings and check the status of Apache.)
+6. If you cannot access it, recheck your port forwarding settings and check the status of Apache.
 
+7. If you encounter authority problems, use 'ubuntu' instead of 'student'. 'ubuntu' is the root account, the password for ubuntu is also 'websec5331'.
 
