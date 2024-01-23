@@ -15,10 +15,10 @@ sessions = {}
 def view_handler():
     cookie = request.cookies.get('session')
     if not cookie:
-        return 'Not login yet!', 500
+        return redirect('/login')
     account = sessions.get(cookie)
     if not account:
-        return 'Invalid session', 500
+        return redirect('/login')
     return render_template('view.html', email=account.email)
 
 @app.route('/update', methods=['GET'])
@@ -50,7 +50,7 @@ def login_handler():
             return 'Invalid credentials', 401
 
 def set_session_cookie(username):
-    cookie = '1dd6fd9ceab04196a5b776d605078877'
+    cookie = '25ff0cac3df99d6dc61d9eecfe8441da4b3bfd54'
     sessions[cookie] = Account(username, emails[username])
     response = redirect('/')
     response.set_cookie('session', cookie, expires=time.time() + 36000)
